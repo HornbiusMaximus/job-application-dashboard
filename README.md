@@ -2,7 +2,7 @@
 
 This Angular application is a prototype for a dashboard that displays a list of submitted job applications. The user can filter and sort the list of applications and click an application to view more details. If the user likes a particular application, they can click a star icon to set a "favorites" flag.
 
-The layout is fully responsive and receives its data through a static JSON file. It is set up to use Observables for future cases where we want to make the data more dynamic. The filtering and sorting fields are minimal its current state, but I plan to add more fields in the near future.
+The layout is fully responsive and receives its data through a static JSON file. It is set up to use Observables for future cases where we want to make the data more dynamic. The filtering and sorting fields are minimal in its current state, but I plan to add more fields in the near future.
 
 View the details below to get up-and-running with this project. Enjoy!
 
