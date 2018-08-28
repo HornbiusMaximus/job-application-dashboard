@@ -1,0 +1,54 @@
+<div class="row">
+	<div class="col-md-6">
+		<app-application-details-field
+			label="Full Name"
+			[value]="_application.name"
+		></app-application-details-field>
+	</div>
+	<div class="col-md-6">
+		<app-application-details-field
+			label="Position"
+			[value]="_application.position"
+		></app-application-details-field>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-6">
+		<app-application-details-field
+			label="Date Applied"
+			[value]="_application.applied"
+		></app-application-details-field>
+	</div>
+	<div class="col-md-6">
+		<app-application-details-field
+			label="Years of Experience"
+			[value]="_application.experience"
+		></app-application-details-field>
+	</div>
+</div>
+<div class="row" id="availability">
+	<div class="col-md-12">
+		<div class="field-label">Available Days</div>
+		<div class="available-days-shell">
+			<div 
+				*ngFor="let day of availableDays"
+				class="day-column"
+				[ngClass]="isAvailable(day)"
+			>{{day}}</div>
+		</div>
+		<div class="weekdays-shell">
+			<div 
+				*ngFor="let day of weekdays"
+				class="day-column"
+			>{{day}}</div>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-12">
+		<app-application-details-field
+			label="Additional Questions"
+			[valueArray]="_application.questions"
+		></app-application-details-field>
+	</div>
+</div>

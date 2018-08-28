@@ -1,0 +1,17 @@
+<form #filterForm="ngForm" (ngSubmit)="filterApplicationList(filterForm.value)">
+	<div id="filter-header">
+		<button type="submit" class="btn btn-dark btn-sm">Apply</button>
+	</div>
+	<h3>Filter By:</h3>
+	<div id="filter-shell">
+		<div class="filter-group">
+			<h4>Position</h4>
+			<div *ngFor="let position of positions$ | async;" class="form-check">
+				<input (ngModel)="position" [name]="position" [value]="position" class="form-check-input" type="checkbox" [id]="positionId(position)">
+				<label class="form-check-label" [for]="positionId(position)">
+					{{position}}
+				</label>
+			</div>
+		</div>
+	</div>
+</form>

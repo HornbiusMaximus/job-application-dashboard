@@ -1,0 +1,65 @@
+@import '~src/theme/app.variables';
+
+:host {
+	display: block;
+	position: relative;
+	font-size: 18px;
+	background: #fff;
+	opacity: 0;
+	visibility: hidden;
+	transform: translate3d(-125px, 0, 0);
+	// transform: translate3d(-125px, 0, 0) scale3d(1.05, 1.05, 1);
+
+	.row {
+		margin: 50px 0;
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		&#availability {
+			border: solid $light-gray-border;
+			border-width: 1px 0;
+			padding: 25px 0;
+		}
+
+		.field-label {
+			text-align: left;
+			margin-bottom: 5px;
+		}
+
+		.weekdays-shell {
+			display: flex;
+
+			.day-column {
+				flex: 1;
+				padding: 5px 0;
+			}
+		}
+
+		.available-days-shell {
+			display: flex;
+			background-color: $gray-bg;
+			border-radius: 5px;
+			border: 1px solid $gray-border;
+
+			.day-column {
+				flex: 1;
+				padding: 15px 0;
+				border-left: 1px solid $gray-border;
+				color: #d2d2d2;
+
+				&.available {
+					color: #3d3d3d;
+					background-color: #8fdaa8;
+					font-weight: bold;
+					border-color: #76b98c;
+				}
+
+				&:first-child {
+					border: 0;
+				}
+			}
+		}
+	}
+}

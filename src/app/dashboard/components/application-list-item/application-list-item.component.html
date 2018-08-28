@@ -1,0 +1,9 @@
+<div class="application-card">
+	<div class="card-bg"></div>
+	<app-star-icon 
+		[selected]="appSaved"
+		(click)="toggleSaveApplication($event)"
+	></app-star-icon>
+	<h3 id="applicant-name">{{application.name}}</h3>
+	<div id="position">{{application.position}}</div>
+</div>

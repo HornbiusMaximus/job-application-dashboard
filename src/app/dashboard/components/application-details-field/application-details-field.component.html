@@ -1,0 +1,10 @@
+<div class="field-label">{{label}}</div>
+<div *ngIf="value" class="field-value">{{value}}</div>
+<div *ngIf="valueArray" class="field-value-array">
+	<ol>
+		<li *ngFor="let value of valueArray">
+			<div class="text">{{value.text}}</div>
+			<div class="answer">{{value.answer}}</div>
+		</li>
+	</ol>
+</div>

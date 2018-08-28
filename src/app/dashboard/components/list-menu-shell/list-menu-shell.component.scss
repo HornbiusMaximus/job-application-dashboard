@@ -1,0 +1,33 @@
+@import '~src/theme/app.variables';
+
+#shade {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.5);
+	z-index: 5;
+	opacity: 0;
+	visibility: hidden;
+}
+
+#list-menu-shell {
+	position: absolute;
+	top: 5px;
+	right: 5%;
+	bottom: 5px;
+	left: 0;
+	background: $gray-bg;
+	z-index: 10;
+	transform: translate3d(-110%, 0, 0);
+	padding: 5px 10px;
+	border: solid $blue-gray;
+	border-width: 2px 2px 2px 0;
+
+	fa-icon {
+		font-size: 1.5em;
+		color: $blue-gray;
+		position: absolute;
+	}
+}

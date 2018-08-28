@@ -1,0 +1,46 @@
+<div id="dashboard-shell" class="container">
+	<div class="row">
+		<div id="list-shell" class="col-md-4" #listShell>
+			<div id="list-header">
+				<button class="btn btn-dark btn-sm" (click)="openListMenu('filter')">
+					<fa-icon [icon]="filterIcon"></fa-icon> Filter
+				</button>
+				<button class="btn btn-dark btn-sm" (click)="openListMenu('sort')">
+					<fa-icon [icon]="sortIcon"></fa-icon> Sort
+				</button>
+			</div>
+			<div id="application-list">
+				<app-application-list-item
+					*ngFor="let application of applicationsList$ | async; index as i"
+					[application]="application"
+					(click)="selectApplication(application, i)"
+				></app-application-list-item>
+			</div>
+			<app-list-menu-shell>
+				<app-filter-menu
+					[ngClass]="listMenuSelected()"
+					[positions$]="positions$"
+					(applyFilter)="filterApplicationsList($event)"
+				></app-filter-menu>
+				<app-sort-menu
+					[ngClass]="listMenuSelected()"
+					[currentSort]="sortObj"
+					(applySort)="sortApplicationsList($event)"
+				></app-sort-menu>
+			</app-list-menu-shell>
+		</div>
+		<div id="details-shell" class="col-md-8" [ngClass]="windowSize()" #detailsShell>
+			<fa-icon [icon]="detailsBackIcon" (click)="backToList()"></fa-icon>
+			<div id="details-inner">
+				<div id="details-intro" #detailsIntroText>
+					<h2>Application Details</h2>
+					<p>Select an application to view the details</p>
+				</div>
+				<app-application-details-card 
+					*ngIf="selectedApplication"
+					[application]="selectedApplicationData">
+				</app-application-details-card>
+			</div>
+		</div>
+	</div>
+</div>

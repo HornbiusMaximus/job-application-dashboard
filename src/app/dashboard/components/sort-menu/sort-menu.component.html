@@ -1,0 +1,45 @@
+<h3>Sort By:</h3>
+<div id="sort-shell">
+	<div class="sort-group">
+		<h4>Name</h4>
+		<div class="btn-group" role="group">
+			<button 
+				type="button"
+				class="btn btn-sm"
+				[ngClass]="isActive('name', 'ASC')"
+				(click)="updateSorting('name', 'ASC')"
+			>
+				ASC <fa-icon [icon]="arrowUpIcon"></fa-icon>
+			</button>
+			<button 
+				type="button"
+				class="btn btn-sm"
+				[ngClass]="isActive('name', 'DESC')"
+				(click)="updateSorting('name', 'DESC')"
+			>
+				DESC <fa-icon [icon]="arrowDownIcon"></fa-icon>
+			</button>
+		</div>
+	</div>
+	<div class="sort-group">
+		<h4>Position</h4>
+		<div class="btn-group" role="group">
+			<button 
+				type="button"
+				class="btn btn-sm"
+				[ngClass]="isActive('position', 'ASC')"
+				(click)="updateSorting('position', 'ASC')"
+			>
+				ASC <fa-icon [icon]="arrowUpIcon"></fa-icon>
+			</button>
+			<button 
+				type="button"
+				class="btn btn-sm"
+				[ngClass]="isActive('position', 'DESC')"
+				(click)="updateSorting('position', 'DESC')"
+			>
+				DESC <fa-icon [icon]="arrowDownIcon"></fa-icon>
+			</button>
+		</div>
+	</div>
+</div>

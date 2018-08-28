@@ -1,0 +1,33 @@
+@import '~src/theme/app.variables';
+
+.field-label {
+	text-align: left;
+    margin-bottom: 5px;
+}
+
+.field-value {
+	background: $gray-bg;
+    padding: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+.field-value-array {
+	text-align: left;
+	background: $gray-bg;
+    padding: 8px;
+	color: #333;
+
+	ol {
+		margin-bottom: 0;
+		
+		li {
+			padding-left: 10px;
+			margin: 20px 0;
+		
+			.answer {
+				font-weight: bold;
+			}
+		}
+	}
+}

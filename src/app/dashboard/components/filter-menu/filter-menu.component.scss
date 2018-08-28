@@ -1,0 +1,23 @@
+@import '~src/theme/app.variables';
+
+:host.hide-filter-menu {
+	display: none;
+}
+
+#filter-header {
+	display: flex;
+	justify-content: flex-end;
+	margin-bottom: 20px;
+	margin-top: 2px;
+}
+
+#filter-shell {
+	padding-left: 25px;
+	margin-top: 15px;
+	border-top: 1px dashed $gray-border;
+	padding-top: 15px;
+
+	.form-check {
+		padding-left: 2.5rem;
+	}
+}

@@ -1,0 +1,25 @@
+@import '~src/theme/app.variables';
+
+:host {
+	display: block;
+	margin-top: 51px;
+
+	&.hide-sort-menu {
+		display: none;
+	}
+
+	#sort-shell {
+		padding-left: 25px;
+		margin-top: 15px;
+		border-top: 1px dashed $gray-border;
+		padding-top: 15px;
+
+		.sort-group {
+			margin-bottom: 20px;
+
+			button:last-child {
+				border-left: 1px solid #fff;
+			}
+		}
+	}
+}
